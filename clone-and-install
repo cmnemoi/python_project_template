@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+git clone https://github.com/cmnemoi/python_project_template.git && cd python_project_template
+make
