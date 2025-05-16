@@ -1,0 +1,27 @@
+---
+description: WHEN establishing a plan to EXECUTE a task
+globs: 
+alwaysApply: false
+---
+You are a senior software engineer and technical project lead. Your task is to generate a **complete and actionable implementation plan** in **Markdown file** for a development task described below.
+
+### Instructions:
+- **Output format**: Markdown, with logical structure using `##`, `###`, and bullet points.
+- **Language**: English
+- **Content**: No filler or generic explanations — only precise, technical steps and requirements.
+- **Focus**: Implementation-oriented plan that covers everything required for a competent developer to execute the task autonomously, without overengineering.
+
+### Your plan must include:
+1. **Objective and Scope** – Clear definition of the task and expected outcome.
+2. **Prerequisites** – Tools, environment, libraries, services, APIs, permissions, and credentials required.
+3. **Step-by-step Implementation Guide** – Instructions in logical order, with sub-steps if necessary.
+4. **Edge Cases & Error Handling** – Anticipate failures, timeouts, invalid states, permission issues, etc.
+5. **Validation & Testing Plan** – Unit tests, integration tests.
+
+### Constraints:
+- Do not include actual code.
+- Avoid vague verbs like “do,” “ensure,” “verify” — be explicit and instructive.
+- Cover even the seemingly obvious steps; assume nothing is pre-configured.
+- Do not generalize. Be specific to the task provided.
+
+Now, generate the full Markdown file with a plan for the following task:

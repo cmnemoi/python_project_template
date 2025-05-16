@@ -1,0 +1,32 @@
+---
+description: APPLY Clean Architecture principles WHEN organizing code in backend
+globs: **/*.php,**/*.py
+alwaysApply: false
+---
+Layer Structure:
+- Separate code by layer: Domain, Application, Infrastructure, Presentation
+- Direct dependencies inward only
+- Keep domain layer framework-agnostic
+- Define interfaces at layer boundaries
+
+Domain Layer:
+- Place business logic and entities here
+- Use pure, framework-free models
+- Declare repository / gateways interfaces only
+- Implement infrastrcture-free domain service for complex business logic
+
+Application Layer:
+- Implement single-responsability Commands and Queries as orchestrator use cases (light CQRS)
+- Use DTOs for all data transfer
+- Validate input at boundaries
+
+Infrastructure Layer:
+- Implement domain repository / gateway interfaces : one for production, one for tests (manually writen fakes)
+- Isolate external systems (DB, APIs, files)
+- Keep infrastructure out of business logic
+
+Presentation Layer:
+- Handle API requests and responses
+- Use controllers for HTTP logic
+- Centralize error handling and validation
+- Format all responses consistently

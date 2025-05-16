@@ -1,0 +1,15 @@
+---
+description: 
+globs: **/api/*.py
+alwaysApply: false
+---
+- Use `async` for non-blocking operations
+- Define endpoints with `@app.get`, `@app.post`, etc.
+- Use `pydantic` for request validation
+- Handle errors with `HTTPException`
+- Document APIs with `OpenAPI`
+- Use dependency injection for shared logic
+- Organize code by feature
+- Use routers for modular endpoints
+- Validate data with `pydantic` models
+- Use middleware for cross-cutting concerns

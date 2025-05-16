@@ -1,0 +1,50 @@
+---
+description: Apply general testing standards for clarity and consistency when writing any test. Covers organization, naming, and core principles like AAA.
+globs: tests/**/*.py
+alwaysApply: false
+---
+# Testing Standards
+
+<version>1.1.0</version>
+
+## Test Organization
+- Organize tests by domain/feature within `unit`, `integration`, and `e2e` directories
+- Use descriptive names for test files and methods, incorporating "should" statements
+- Follow the Given-When-Then pattern in tests into functions
+
+## Unit Tests (`tests/unit`)
+- Place tests in directories reflecting the domain structure
+- Use a common base class for unit tests if applicable
+- Prefer handwritten in-memory fakes over mocks
+- Test one unit of functionality at a time, covering both success and failure paths
+
+## Integration Tests (`tests/integration`)
+- Organize tests to reflect integration points between components
+- Use a common base class for integration tests if applicable
+- Use setup methods to prepare test data and dependencies
+- Ensure tests validate integration behavior, not implementation details
+
+## End-to-End Tests (`tests/e2e`)
+- Organize tests to reflect user journeys and interactions
+- Use a common base class for e2e tests if applicable
+- Use setup methods for common test data and environment configuration
+- Focus on testing real user interactions and behaviors
+
+## Test Data and Dependencies
+- Use factories for creating test entities
+- Use dependency injection for services
+- Prefer programmatic setup over database fixtures
+
+## Test Quality
+- Write tests that validate behavior, not implementation details
+- Use meaningful assertions that focus on behavior outcomes
+- Keep test code DRY by extracting common setup and assertion code
+- Ensure all tests are deterministic and repeatable
+
+## Critical Rules
+- NEVER test implementation details; focus on behaviors
+- ALWAYS follow the Given-When-Then pattern in tests, by putting different parts into separate functions
+- ALWAYS use descriptive method names for setup, action, and assertion steps
+- ALWAYS test both success and failure scenarios
+- ALWAYS use in-memory repositories over mocks when possible
+- NEVER make tests dependent on each other
