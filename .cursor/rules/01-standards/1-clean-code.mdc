@@ -1,0 +1,37 @@
+---
+description: 
+globs: **/*.py
+alwaysApply: false
+---
+
+Code Quality:
+- Write no comments
+- Use strict types only
+- Disallow untyped values
+- Use explicit constants, never magic numbers
+- Avoid double negatives
+- Use long, readable variable names
+- Write the simplest code possible : code should be so obvious it cannot have bugs
+- Eliminate duplication (DRY)
+
+Length Limits:
+- Max 30 lines per function, extract until you drop
+- Max 5 params per function
+- Max 300 lines per file
+- Max 10 sub-files per folder
+
+Responsibilities:
+- One responsibility per file
+
+Functions:
+- No flag parameters
+- Non public functions / methods should be put at the end of the file
+- Non public functions / methods should be prefixed by an underscore
+- Avoid nested functions
+
+Errors:
+- Fail fast
+- Throw errors early
+- Use custom domain errors
+- Translate errors to user language
+- Log errors in EN with error codes
